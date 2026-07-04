@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Kachhawa - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            line-height: 1.4;
+            color: #333;
+        }
+
+        .resume {
+            width: 800px;
+            max-width: 95%;
+            background: #fff;
+            margin: 20px auto;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #56788a;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .section {
+            margin: 10px 0;
+        }
+
+        .section h2 {
+            font-size: 15px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #56788a;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .section p,
+        .section li {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .section ul {
+            margin-left: 20px;
+            list-style: disc;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .left,
+        .right {
+            flex: 1;
+            min-width: 300px;
+            align-self: flex-start;
+        }
+
+        .full-width-divider {
+            width: 100%;
+            border-top: 2px solid #56788a;
+            margin: 15px 0 5px;
+        }
+
+        .experience-section {
+            width: 100%;
+        }
+
+        .experience-grid {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+
+        .experience-item {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .experience-item p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 5px 0;
+        }
+
+        .experience-item li {
+            position: relative;
+            padding-left: 15px;
+            margin: 5px 0;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .experience-item li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #56788a;
+        }
+
+        .projects-section {
+            width: 100%;
+        }
+
+        .projects-grid {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+
+        .project-item {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .project-item p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .skills-category {
+            margin: 10px 0 6px;
+        }
+
+        .skills-category strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            color: #56788a;
+            letter-spacing: 0.3px;
+            padding: 4px 0 4px 10px;
+            margin-bottom: 4px;
+            border-left: 3px solid #56788a;
+            background: linear-gradient(to right, #eef3f6 0%, transparent 100%);
+        }
+
+        .skills-list {
+            font-size: 13px;
+            margin: 0 0 0 13px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        .soft-skills-list {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        /* Print styles */
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            html,
+            body {
+                margin: 0 !important;
+                padding: 0 !important;
+                background: #fff !important;
+            }
+
+            .resume {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 10mm 10mm !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                box-sizing: border-box !important;
+            }
+
+            .header {
+                padding: 10px !important;
+                border-radius: 4px !important;
+                background-color: #56788a !important;
+                color: #fff !important;
+            }
+
+            .header h1 {
+                font-size: 26px !important;
+            }
+
+            .section {
+                margin: 8px 0 !important;
+            }
+
+            .section h2 {
+                font-size: 15px !important;
+                margin-bottom: 4px !important;
+                padding-bottom: 4px !important;
+            }
+
+            .section p,
+            .section li,
+            .experience-item p {
+                font-size: 13px !important;
+                margin: 3px 0 !important;
+                line-height: 1.35 !important;
+            }
+
+            .skills-category {
+                margin: 6px 0 3px !important;
+            }
+
+            .skills-category strong {
+                font-size: 13px !important;
+                padding: 3px 0 3px 8px !important;
+                margin-bottom: 3px !important;
+            }
+
+            .skills-list,
+            .soft-skills-list {
+                font-size: 12px !important;
+                line-height: 1.35 !important;
+            }
+
+            .flex-container {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                gap: 20px !important;
+            }
+
+            .left,
+            .right {
+                flex: 1 !important;
+                min-width: 0 !important;
+            }
+
+            .full-width-divider {
+                margin: 12px 0 6px !important;
+            }
+
+            .experience-grid {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                gap: 20px !important;
+                margin-top: 5px !important;
+            }
+
+            .experience-item {
+                flex: 1 !important;
+                min-width: 0 !important;
+            }
+
+            a {
+                color: #56788a !important;
+                text-decoration: none !important;
+            }
+
+            .experience-item ul {
+                list-style: none !important;
+                padding-left: 0 !important;
+                margin: 3px 0 !important;
+            }
+
+            .experience-item li {
+                font-size: 12px !important;
+                line-height: 1.35 !important;
+                margin: 3px 0 !important;
+                padding-left: 12px !important;
+                position: relative !important;
+            }
+
+            .experience-item li::before {
+                content: "→" !important;
+                position: absolute !important;
+                left: 0 !important;
+                color: #56788a !important;
+            }
+
+            .projects-grid {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                gap: 20px !important;
+                margin-top: 5px !important;
+            }
+
+            .project-item {
+                flex: 1 !important;
+                min-width: 0 !important;
+            }
+
+            .project-item p {
+                font-size: 13px !important;
+                margin: 3px 0 !important;
+                line-height: 1.35 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume">
+        <div class="header">
+            <h1>Rohit Kachhawa</h1>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="section">
+            <h2>Profile</h2>
+            <p><strong>Laravel Developer</strong> with <strong>2 years of experience</strong> in developing and maintaining web applications using <strong>PHP and Laravel</strong>. Skilled in <strong>MySQL, JavaScript, jQuery, AJAX, Bootstrap, and REST API development</strong>. Experienced in <strong>developing new features, fixing production bugs, implementing authentication and role-based access control, integrating third-party APIs</strong>, and working with <strong>Git and GitLab</strong>. A quick learner with a passion for writing <strong>clean, maintainable code</strong> and contributing to high-quality software solutions.
+            </p>
+        </div>
+
+        <div class="flex-container">
+            <div class="left">
+                <div class="section">
+                    <h2>Personal Information</h2>
+                    <p><strong>Phone number:</strong> +91 6266457183</p>
+                    <p><strong>Email:</strong> rohitkachhawa095@gmail.com</p>
+                    <p><strong>Web:</strong> <a href="https://linkedin.com/in/rohit-kachhawa-b31b22281"
+                            target="_blank">linkedin.com/in/rohit-kachhawa-b31b22281</a></p>
+                </div>
+
+                <div class="section">
+                    <h2>Technical Skills</h2>
+                    <div class="skills-category">
+                        <strong>Programming Languages & Frameworks</strong>
+                        <p class="skills-list">PHP, Laravel, CodeIgniter, Python</p>
+                    </div>
+                    <div class="skills-category">
+                        <strong>Web Development</strong>
+                        <p class="skills-list">HTML, CSS, JavaScript, Bootstrap, WordPress, REST APIs, AJAX</p>
+                    </div>
+                    <div class="skills-category">
+                        <strong>Database Management</strong>
+                        <p class="skills-list">MySQL, MongoDB, MySQL Workbench</p>
+                    </div>
+                    <div class="skills-category">
+                        <strong>Tools & Platforms</strong>
+                        <p class="skills-list">Git, GitHub, GitLab, VS Code, ClickUp, XAMPP, AWS (Basics)</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Soft Skills</h2>
+                    <p class="soft-skills-list">Time Management, Problem-Solving, Creativity, Team Collaboration, Communication</p>
+                </div>
+
+                <div class="section">
+                    <h2>Education Qualification</h2>
+                    <p><strong>2024-2027 | B.Tech (CSE)</strong><br>
+                        Lakshmi Narayan College of Technology and Science, Affiliated RGPV University, Bhopal (Pursuing)
+                    </p>
+                    <p><strong>2021-2024 | Diploma (CSE)</strong><br>
+                        Government Polytechnic College Agar Malwa, Affiliated RGPV University, Bhopal (CGPA: 7.88)</p>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="section">
+                    <h2>Experience</h2>
+                    <div class="experience-item" style="margin-bottom: 12px;">
+                        <p><strong>Feb 2025 - Present | Junior Software Engineer</strong><br>
+                            Seshat Technology Pvt. Ltd. (Project: College Doors)</p>
+                        <ul>
+                            <li>Optimized database queries and resolved N+1 query issues, improving application performance.</li>
+                            <li>Developed, maintained, and enhanced backend modules including Notification System, Batch Mapping, and Scheduled Test Management by adding new features and improvements.</li>
+                            <li>Implemented batch-to-test mapping to streamline and automate test scheduling workflows.</li>
+                            <li>Identified and resolved critical bugs using a ticket-based issue tracking system.</li>
+                            <li>Debugged and fixed application errors by analyzing error logs stored in the database.</li>
+                            <li>Collaborated with the development team to enhance system scalability and reliability.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <p><strong>Aug 2024 – Jan 2025 | PHP Full Stack Intern</strong><br>
+                            Ypsilon IT Solution Pvt. Ltd., Indore</p>
+                        <ul>
+                            <li>Contributed to the development and optimization of dynamic web applications using PHP.</li>
+                            <li>Assisted in building and maintaining full-stack features across multiple projects.</li>
+                            <li>Worked on backend logic, database management, and debugging tasks.</li>
+                            <li>Gained hands-on experience in real-world project development and team collaboration.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Certifications</h2>
+                    <p><strong>PHP FULL STACK Certification</strong><br>
+                        Universal Informatics</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="full-width-divider"></div>
+
+        <div class="section projects-section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <p><strong>Online Notes Sharing System</strong></p>
+                    <ul>
+                        <li>Developed using Laravel with features such as batch creation, student-batch mapping, notes upload, and notes management.</li>
+                        <li>Implemented CRUD operations, user authentication, and role-based access control.</li>
+                        <li>Focused on efficient database design and API integration as part of a major academic project.</li>
+                    </ul>
+                </div>
+                <div class="project-item">
+                    <p><strong>Personal Portfolio Website</strong></p>
+                    <ul>
+                        <li>Created a responsive portfolio using HTML, CSS, JavaScript, and AJAX.</li>
+                        <li>Added smooth scrolling, project showcase, SEO optimization, and contact form.</li>
+                        <li>Deployed on GitHub Pages: https://rohitkachhawa12.github.io/Portfolio-website</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

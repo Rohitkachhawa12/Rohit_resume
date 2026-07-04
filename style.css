@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Now it takes up the full width of the screen */
+    max-width: 1000px; /* A good maximum width for readability */
+    min-height: 100vh; /* Ensures content fills the page vertically */
+}
+
+.header {
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 30px 40px;
+    position: relative;
+}
+
+.name {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    flex: 1;
+}
+
+.left-column {
+    flex: 2; /* Takes up more space than the right column */
+    padding: 30px 40px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.right-column {
+    flex: 1; /* Takes up less space than the left column */
+    padding: 30px 40px;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    color: #3f51b5;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.section-title .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #3f51b5;
+    margin-right: 10px;
+}
+
+.profile-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.contact-list li {
+    margin-bottom: 5px;
+}
+
+.contact-list a {
+    color: #3f51b5;
+    text-decoration: none;
+}
+
+.edu-item, .exp-item, .project-item, .cert-item {
+    margin-bottom: 15px;
+}
+
+.edu-item h3, .exp-item h3, .project-item h3, .cert-item h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.edu-year, .edu-location, .exp-date {
+    font-size: 0.8rem;
+    color: #616161;
+}
+
+.exp-details, .project-details {
+    padding-left: 20px;
+    font-size: 0.9rem;
+    color: #424242;
+}
+
+.skill-category {
+    margin-bottom: 15px;
+}
+
+.skill-sub-title {
+    font-size: 0.9rem;
+    color: #616161;
+    margin-bottom: 5px;
+}
+
+.skill-list, .skill-list-right {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.skill-list li, .skill-list-right .skill-bar {
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    color: #424242;
+}
+
+/* Print Styles - This is crucial! */
+@media print {
+    body {
+        background: none;
+        padding: 0;
+        margin: 0;
+    }
+    .resume-container {
+        box-shadow: none;
+        min-height: auto;
+        width: 100%;
+    }
+    .main-content {
+        flex-direction: row; /* Ensure columns stay side-by-side for printing */
+        page-break-after: auto;
+    }
+    .left-column, .right-column {
+        padding: 20px;
+        border: none;
+    }
+    .left-column {
+        width: 60%;
+    }
+    .right-column {
+        width: 40%;
+    }
+}
